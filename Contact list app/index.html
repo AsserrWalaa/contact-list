@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List App</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container p-5 text-center ">
+        <h1 class="pb-3">Contact List App</h1>
+        <button onclick=" togglePopup()" class="addNew">Add New
+            Contact</button>
+    </div>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="contactTable">
+            <!-- Contacts will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Popup Box for Adding and Editing Contacts -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2 id="popupTitle">Add New Contact</h2>
+            <form id="contactForm">
+                <input type="hidden" id="contactId">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" required><br><br>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" required><br><br>
+
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" required><br><br>
+
+                <label for="homeAddress">Home Address:</label>
+                <input type="text" id="homeAddress" required><br><br>
+
+                <button type="button" id="saveButton" onclick="saveContact()">Save</button>
+                <button type="button" onclick="togglePopup()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
